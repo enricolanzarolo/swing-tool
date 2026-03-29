@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwingTool — Trading Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- Loading overlay -->
+<div id="loading-overlay">
+  <div class="spinner" style="width:32px;height:32px;border-width:3px"></div>
+  <p>Caricamento…</p>
+</div>
+
+<!-- Topbar -->
+<div id="topbar">
+  <div class="logo">SWING<span>TOOL</span></div>
+
+  <div class="market-pill">
+    <span class="label">VIX</span>
+    <span class="value" id="pill-vix">—</span>
+  </div>
+
+  <div class="market-pill">
+    <span class="label">Fear&amp;Greed</span>
+    <span class="value" id="pill-fg">—</span>
+  </div>
+
+  <div class="market-pill">
+    <span class="label">EUR/USD</span>
+    <span class="value" id="pill-eur">—</span>
+  </div>
+
+  <div class="market-pill">
+    <span class="label">Capitale</span>
+    <span class="value up">€{{ capital }}</span>
+  </div>
+
+  <div class="spacer"></div>
+
+  <button id="scan-btn">▶ Scan Watchlist</button>
+</div>
+
+<!-- App layout -->
+<div id="app">
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <span>Watchlist</span>
+      <span>{{ watchlist | sum(attribute=None, start=0) if false else (watchlist.values() | sum(attribute='__len__') if false else '') }}</span>
+    </div>
+    <div id="ticker-list">
+      {% for group, tickers in watchlist.items() %}
+      <div class="ticker-group">
+        <div class="group-label">{{ group }}</div>
+        {% for ticker in tickers %}
+        <div class="ticker-row" id="tr-{{ ticker }}" onclick="loadTicker('{{ ticker }}')">
+          <span class="ticker-name">{{ ticker }}</span>
+          <span class="ticker-price" id="tp-{{ ticker }}">—</span>
+          <span class="ticker-score" id="ts-{{ ticker }}">—</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div id="main">
+
+    <!-- Welcome screen -->
+    <div id="welcome">
+      <div class="big">📈</div>
+      <h2>SwingTool pronto</h2>
+      <p>Clicca un ticker nella sidebar per analizzarlo,<br>
+         oppure usa <strong>Scan Watchlist</strong> per analizzare tutti i ticker in una volta.</p>
+    </div>
+
+    <!-- Ticker view (hidden initially) -->
+    <div id="ticker-view" style="display:none"></div>
+
+  </div>
+</div>
+
+<!-- Pass watchlist to JS -->
+<script>
+  const WATCHLIST = {{ watchlist | tojson }};
+</script>
+<script src="/static/app.js"></script>
+
+</body>
+</html>
