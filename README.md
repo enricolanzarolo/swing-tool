@@ -1,4 +1,4 @@
-# 📈 SwingTool — Trading Analyzer by Enrico
+# 📈 SwingTool — Trading Analyzer by Enrico 2026
 
 Tool di analisi swing trading con AI, indicatori tecnici e backtesting.
 Questo progetto è ancora in fase di testing, realizzato principalmente con AI
