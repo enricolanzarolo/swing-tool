@@ -31,13 +31,13 @@ swing_tool/
 ├── main.py                 ← 🌐 App Flask (Modulo 8)
 │
 ├── modules/
-│   ├── data_fetcher.py     ← ✅ MOD 1: Dati Yahoo Finance
-│   ├── indicators.py       ← ⏳ MOD 2: RSI, MACD, BB, ATR...
-│   ├── scorer.py           ← ⏳ MOD 3: Sistema pesi e score
-│   ├── signals.py          ← ⏳ MOD 4: Segnali BUY/SELL
-│   ├── news_sentiment.py   ← ⏳ MOD 5: News e sentiment
-│   ├── ai_analyst.py       ← ⏳ MOD 6: Analisi Claude AI
-│   └── backtester.py       ← ⏳ MOD 7: Backtesting
+│   ├── data_fetcher.py     ← MOD 1: Dati Yahoo Finance
+│   ├── indicators.py       ← MOD 2: RSI, MACD, BB, ATR...
+│   ├── scorer.py           ← MOD 3: Sistema pesi e score
+│   ├── signals.py          ← MOD 4: Segnali BUY/SELL
+│   ├── news_sentiment.py   ← MOD 5: News e sentiment
+│   ├── ai_analyst.py       ← MOD 6: Analisi Claude AI
+│   └── backtester.py       ← MOD 7: Backtesting
 │
 ├── static/
 │   ├── style.css           ← ⏳ MOD 8: Stile UI
@@ -53,16 +53,16 @@ swing_tool/
 
 | # | Modulo            | Stato  | Descrizione                          |
 |---|-------------------|--------|--------------------------------------|
-| 1 | DataFetcher       | ✅ Done | Yahoo Finance, prezzi, EUR/USD       |
-| 2 | Indicators        | ⏳     | RSI, MACD, BB, ATR, ADX, Volume      |
-| 3 | Scorer            | ⏳     | Sistema pesi → score 0-100           |
-| 4 | Signals           | ⏳     | BUY/SELL/WATCH + entry/exit/SL       |
-| 5 | News & Sentiment  | ⏳     | Feed RSS, VIX, Fear&Greed            |
-| 6 | AI Analyst        | ⏳     | Analisi Claude su ogni segnale       |
-| 7 | Backtester        | ⏳     | Win rate, rendimento 2 anni          |
-| 8 | UI Web            | ⏳     | Dashboard Flask interattiva          |
-| 9 | Multi-Scanner     | ⏳     | Scan intera watchlist in parallelo   |
-|10 | Ottimizzazioni    | ⏳     | Fine-tuning pesi, alerting           |
+| 1 | DataFetcher       | Done | Yahoo Finance, prezzi, EUR/USD       |
+| 2 | Indicators        | Done | RSI, MACD, BB, ATR, ADX, Volume      |
+| 3 | Scorer            | Done | Sistema pesi → score 0-100           |
+| 4 | Signals           | Done | BUY/SELL/WATCH + entry/exit/SL       |
+| 5 | News & Sentiment  | Done | Feed RSS, VIX, Fear&Greed            |
+| 6 | AI Analyst        | Done | Analisi Claude su ogni segnale       |
+| 7 | Backtester        | Done | Win rate, rendimento 2 anni          |
+| 8 | UI Web            | Done | Dashboard Flask interattiva          |
+| 9 | Multi-Scanner     | Done | Scan intera watchlist in parallelo   |
+|10 | Ottimizzazioni    | Done | Fine-tuning pesi, alerting           |
 
 ---
 
