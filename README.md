@@ -40,11 +40,11 @@ swing_tool/
 │   └── backtester.py       ← MOD 7: Backtesting
 │
 ├── static/
-│   ├── style.css           ← ⏳ MOD 8: Stile UI
-│   └── app.js              ← ⏳ MOD 8: Logica frontend
+│   ├── style.css           ←  MOD 8: Stile UI
+│   └── app.js              ←  MOD 8: Logica frontend
 │
 └── templates/
-    └── index.html          ← ⏳ MOD 8: Interfaccia web
+    └── index.html          ←  MOD 8: Interfaccia web
 ```
 
 ---
